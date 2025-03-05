@@ -17,6 +17,8 @@ class AViewController: UIViewController {
     
     func setupUI(){
         
+        view.backgroundColor = .systemBackground
+        
         let labelA = {
             let label = UILabel()
             label.text = "A"
@@ -24,11 +26,14 @@ class AViewController: UIViewController {
             return label
         }()
         
+        view.addSubview(labelA)
+        
         NSLayoutConstraint.activate([
             labelA.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             labelA.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        view.addSubview(labelA)
+        
     }
 }
+

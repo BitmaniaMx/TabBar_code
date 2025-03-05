@@ -8,14 +8,18 @@
 import UIKit
 
 class BViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
     }
     
+    
+    
     func setupUI(){
+        
+        view.backgroundColor = .systemBackground
         
         let labelB = {
             let label = UILabel()
@@ -24,12 +28,12 @@ class BViewController: UIViewController {
             return label
         }()
         
+        view.addSubview(labelB)
+        
         NSLayoutConstraint.activate([
             labelB.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             labelB.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-        
-        view.addSubview(labelB)
     }
-
 }
+

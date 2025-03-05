@@ -2,7 +2,7 @@
 //  CViewController.swift
 //  TabBar_code
 //
-//  Created by Rafael Gonzalez on 04/03/25.
+//  Created by Rafael Gonzalez on 05/03/25.
 //
 
 import UIKit
@@ -16,6 +16,8 @@ class CViewController: UIViewController {
     }
     
     func setupUI(){
+        
+        view.backgroundColor = .systemBackground
         
         let labelC = {
             let label = UILabel()
@@ -31,13 +33,17 @@ class CViewController: UIViewController {
             return button
         }()
         
+        view.addSubview(labelC)
         NSLayoutConstraint.activate([
             labelC.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             labelC.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        view.addSubview(labelC)
+        view.addSubview(buttonC)
+        NSLayoutConstraint.activate([
+            buttonC.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            buttonC.topAnchor.constraint(equalTo: labelC.bottomAnchor, constant: 20)
+        ])
     }
-
-
 }
+
