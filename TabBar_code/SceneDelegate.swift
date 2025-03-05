@@ -25,25 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let bVC = BViewController()
         let cVC = CViewController()
         
-        //Create Tabbar
-        let tabBarController = UITabBarController()
         
-        //Set up tabs items
-        let tabBarItemA = UITabBarItem(title: "", image: UIImage(systemName: "character"), tag: 0)
-        aVC.tabBarItem = tabBarItemA
-        
-        let tabBarItemB = UITabBarItem(title: "", image: UIImage(systemName: "calendar"), tag: 1)
-        bVC.tabBarItem = tabBarItemB
-        
-        let tabBarItemC = UITabBarItem(title: "", image: UIImage(systemName: "bell"), tag: 2)
-        cVC.tabBarItem = tabBarItemC
-        
-        //setup cVC as root to NavigationController
-        let navController = UINavigationController(rootViewController: cVC)
-        
-        tabBarController.viewControllers = [aVC,bVC,navController]
-        
-        window?.rootViewController = tabBarController
+//        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
     }
